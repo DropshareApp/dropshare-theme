@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>YourName: Download __FILENAME__</title>
+      <link rel="stylesheet" href="css/app.css?v=10">
+      <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css">
+      <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <div class="content-wrapper">
+      <header class="row">
+         <div class="logo columns large-4 ">
+             <img src="img/logo/logo.png" alt="logo">
+         </div>
+      </header>
+      <main>
+          <div class="download">
+              <div class="header column"><h1>Download</h1></div>
+              <div class="description medium-8 column">
+                  <span class="description-element">File: <p class="filename">__FILENAME__ (__FILESIZE__)</p></span>
+                  <span class="description-element">Shared: <p>__SHAREDATE__</p></span>
+              </div>
+              <div class="download-button medium-4 column">
+                  <a href="__PATH__" download class="btn btn-primary">Download</a>
+              </div>
+              <div class="preview large-12 column">
+                  __PREVIEW__
+              </div>
+          </div>
+      </main>
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/what-input/what-input.js"></script>
+      <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+      <script src="bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
+      <script src="js/app.js?v=10"></script>
+      <script>
+          $( document ).ready(function() {
+              $( ".img-thumbnail" ).wrap( '<a href="__PATH__" class="fancybox"></a>' );
+              $( ".imagePreview" ).prepend( '<span>Preview</span></br>' );
+              $('.fancybox').fancybox();
+          });
+      </script>
+  </div>
+  </body>
+</html>
+
+
